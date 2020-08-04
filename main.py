@@ -70,10 +70,10 @@ seedString = input("Enter a seed number: ")
 seedNumber = int( seedString )
 seed(seedNumber)
 
-# # 2.) select a hand for either rock, paper, sci... spock [5 choices].  user enters that through the keyboard
+# # # 2.) select a hand for either rock, paper, sci... spock [5 choices].  user enters that through the keyboard
 # userValue   = getUserInput()
 #
-# # 3.) generate a random hand for the computer
+# # # 3.) generate a random hand for the computer
 # computerValue = generateComputerHand()
 userValue     = "Rock"
 computerValue = "Rock"
@@ -82,7 +82,8 @@ computerValue = "Rock"
 while userValue == computerValue:
     print("Tied: ", userValue, " vs. ", computerValue)
     # keep asking the user for as new hand
-    userHand = getUserInput()
+    userValue     = getUserInput()
+    computerValue = generateComputerHand()
 
 # 4.) determine who won
 winner = compareHands( userValue , computerValue)
